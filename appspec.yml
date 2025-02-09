@@ -1,0 +1,18 @@
+version: 0.0
+os: linux  # or windows, depending on your target environment
+files:
+  - source: /
+    destination: /opt/brokenauthdemo  # or C:\brokenauthdemo for Windows
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: root  # or Administrator for Windows
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 3600
+      runas: root  # or Administrator for Windows
+  ApplicationStop:
+    - location: scripts/stop_application.sh
+      timeout: 3600
+      runas: root  # or Administrator for Windows
