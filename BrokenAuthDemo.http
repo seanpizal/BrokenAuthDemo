@@ -1,0 +1,6 @@
+@BrokenAuthDemo_HostAddress = http://localhost:5052
+
+GET {{BrokenAuthDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
