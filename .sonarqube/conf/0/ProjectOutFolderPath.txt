@@ -1,0 +1,1 @@
+H:\ZZ_Personal\Usach\HerramientasDevSecOps_enAWS\VulnerabilityProjects\BrokenAccess\BrokenAuthDemo\.sonarqube\out\0

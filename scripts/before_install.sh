@@ -1,3 +1,3 @@
 #!/bin/bash
 # Remove previous versions
-rm -rf /opt/brokenauthdemo/*
+# rm -rf /opt/brokenauthdemo/*
