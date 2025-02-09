@@ -4,7 +4,7 @@ phases:
   install:
     runtime-versions:
       dotnet: 8.0
-      docker: 20
+      # docker: 20
     commands:
       - echo Installing .NET 8.0 SDK and Docker...
   pre_build:
@@ -25,10 +25,10 @@ phases:
     commands:
       - echo Publishing the application...
       - dotnet publish --configuration Release --output ./publish_output
-      - echo Tagging and pushing Docker image to ECR...
-      - docker tag brokenauthdemo:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/brokenauthdemo:latest
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/brokenauthdemo:latest
-      - echo Writing image definitions file...
+      # - echo Tagging and pushing Docker image to ECR...
+      # - docker tag brokenauthdemo:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/brokenauthdemo:latest
+      # - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/brokenauthdemo:latest
+      # - echo Writing image definitions file...
       - printf '[{"name":"brokenauthdemo","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/brokenauthdemo:latest > imagedefinitions.json
 artifacts:
   files:
