@@ -14,4 +14,4 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 sudo yum install -y dotnet-sdk-8.0
 
 # Verify the installation
-dotnet --version
+dotnet --versioncd 
