@@ -34,7 +34,6 @@ artifacts:
   files:
     - imagedefinitions.json
     - taskdef.json
-    - appspec.hml
-    - scripts/before_install.sh
-    - scripts/start_application.sh
-    - scripts/stop_application.sh-
+    - appspec.yml
+    - scripts/**/*
+    - bin/**/*
