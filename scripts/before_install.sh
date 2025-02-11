@@ -23,4 +23,4 @@ sudo yum install -y dotnet-sdk-8.0
 
 # Verify the installation
 echo "dotnet --"
-dotnet --versioncd 
+dotnet --version
