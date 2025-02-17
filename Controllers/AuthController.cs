@@ -33,7 +33,7 @@ namespace BrokenAuthDemo.Controllers
             // Ensure the session is saved with a new ID
             //HttpContext.Session.CommitAsync().Wait();
 
-            return Ok($"Login successful {HttpContext.Session.Id}");
+            return Ok($"Conexion exitosa de {HttpContext.Session.Id}");
         }
 
         [HttpGet("profile")]
@@ -42,9 +42,9 @@ namespace BrokenAuthDemo.Controllers
             var username = HttpContext.Session.GetString("User");
             if (string.IsNullOrEmpty(username))
             {
-                return Unauthorized($"Not logged in {HttpContext.Session.Id}");
+                return Unauthorized("No loggeado");
             }
-            return Ok($"Welcome, {username}");
+            return Ok($"Bienvenido, {username}");
         }
     }
 }
