@@ -19,7 +19,7 @@ namespace BrokenAuthDemo.Controllers
             var user = _users.FirstOrDefault(u => u.Username == login.Username && u.Password == login.Password);
             if (user == null)
             {
-                return Unauthorized($"Invalid credentials {HttpContext.Session.Id}");
+                return Unauthorized($"Credenciales erroneas");
             }
 
             // Clear the current session to invalidate the old session ID
