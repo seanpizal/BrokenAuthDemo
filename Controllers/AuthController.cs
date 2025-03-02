@@ -10,7 +10,8 @@ namespace BrokenAuthDemo.Controllers
         private static readonly List<User> _users = new List<User>
         {
             new User { Username = "admin", Password = "123" }, // Weak password
-            new User { Username = "user", Password = "password" } // Weak password
+            new User { Username = "user", Password = "password" }, // Weak password
+            new User { Username = "client", Password = "password123" } // Weak password
         };
 
         [HttpPost("login")]
